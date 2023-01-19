@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+}
+
+.body5 {
+    background-color: #f5f5f5;
+    font-family: sans-serif;
+    text-align: center;
+    height: 70%;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.button {
+    background-color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.nav_bar{
+    margin-top: 20%;
+	background-color:transparent;
+	display: inline;
+	width: 100%;
+	padding: 1%;
+	margin-left: 5%;
+	margin-right: 3%;
+	
+
+}
+.nav-link {
+	text-align: center;
+	font-size: 130%;
+	color:black;
+	padding: 1%;
+	border-radius: 6%;
+	margin-left: 1%;
+	text-decoration: none;
+	
+  }
+  .nav-link:hover {
+	background-color: #fff;
+	color:#AACFD7;
+  }
+  
+
+  .nav-header {
+	background-color: #AACFD7;
+  }
+  .nav-header img {
+	width: 5%;
+  }
+  .nav-logo img {
+	top:1;
+	position: absolute;
+	width:5%;
+  }
+
+/* Style For Navigation */
+.nav {
+    margin-top: 10%;
+    height: 50px;
+    line-height: 50px;
+    background-color: white;
+    border-bottom: solid 2px #AACFD7;
+}
+
+.nav h1 {
+    color: #272727;
+    font-size: 18px;
+}
+
+/* Style For Content */
+.content {
+    width: 100%;
+    height: 70%;
+}
+
+/* Style For Profile Section */
+.profile-section {
+    float: left;
+    width: 25%;
+    height: 100%;
+    text-align: center;
+    padding-top: 30px;
+    background: #AACFD7;
+    background-size: cover;
+    background-position: top;
+}
+
+.profile-photo {
+    width: 50%;
+    border-radius: 50%;
+    border: solid 3px white;
+}
+
+.profile-name {
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.profile-detail {
+    color: #fff;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.profile-follow {
+    background-color: #39b85d;
+    color: white;
+    transition: all 0.3s;
+    font-size: 15px;
+}
+
+.profile-follow:hover {
+    background-color: white;
+    color: #4c99b8;
+    transition: all 0.3s;
+}
+
+/* Style For Detail Section */
+.detail-section {
+    float: left;
+    width: 75%;
+    padding-top: 30px;
+}
+
+/* Card Style */
+.card {
+    background-color: white;
+    line-height: 25px;
+    margin-bottom: 15px;
+}
+
+.card-title {
+    font-weight: bold;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: #2d2d2d;
+    border-bottom: solid 2px #dbdbdb;
+}
+
+.card-body {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}

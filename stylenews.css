@@ -1,0 +1,125 @@
+body{
+	background-image: url("24.jpg");
+	background-repeat: no-repeat;
+
+	
+}
+.nav_bar{
+	background-color: transparent;
+	display: inline;
+	width: 100%;
+	padding: 1%;
+	margin-left: 5%;
+	margin-right: 3%;
+	
+
+}
+.nav-link {
+	text-align: center;
+	font-size: 130%;
+	color:black;
+	padding: 1%;
+	border-radius: 6%;
+	margin-left: 1%;
+	text-decoration: none;
+	
+  }
+  .nav-link:hover {
+	background-color: #fff;
+	color:#AACFD7;
+  }
+  
+
+  .nav-header {
+	background-color: #AACFD7;
+  }
+  .nav-header img {
+	width: 5%;
+  }
+  .nav-logo img {
+	top:1;
+	position: absolute;
+	width:5%;
+  }
+
+
+ footer {
+	text-align: center;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	padding: 1%;
+	margin-bottom: 1%;
+	justify-content: center;
+	background-color:#6C829D ;
+	color: black;
+  }
+  footer a{
+	padding: 1%;
+  }
+  footer img{
+	display: inline-block;
+	width:1%;
+  }
+  
+
+  
+.slide{
+	background-color:white;
+	
+
+}
+.cover {
+	width:100%;
+	overflow: scroll;
+	display: flex;
+}
+.recette {
+	width: 400%;
+	background-color: #fff;
+    margin: 40px 8px 40px 8px;
+    padding: 0px 8px 20px 8px;
+    margin-top: 5%;
+    box-shadow: 0px 0px 8px 8px rgb(0, 0, 0, 0.1);
+	text-align: center;
+	
+}
+ h1 {
+    margin-top:27%;
+    text-align: center;
+}
+.recette h4{
+	text-align: center;
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+.recette p{
+	text-align: center;
+}
+.recette a{
+	text-align: center;
+	text-decoration: none;
+	color:#7e7e7e;
+}
+.recette img{
+	margin-left: 5%;
+	width: 50%;
+}
+.hover{
+	text-align: center;
+}
+.formulaire{
+	margin-top: 30%;
+	margin-left: 22%;
+	background-color: #AACFD7;
+	width: 800px;
+	height: 100px;
+}
+.formulaire label{
+	font-size: medium;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.formulaire input{
+margin-top: 3%;
+
+}
