@@ -1,4 +1,6 @@
-
+body{
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 .nav_bar{
 	background-color: transparent;
 	display: inline;
@@ -9,6 +11,7 @@
 	
 
 }
+
 .nav-link {
 	text-align: center;
 	font-size: 130%;
@@ -17,6 +20,7 @@
 	border-radius: 6%;
 	margin-left: 1%;
 	text-decoration: none;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 	
   }
   .nav-link:hover {
@@ -66,7 +70,9 @@
 	
 	
 }
-
+p{
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 .slider{
 	width:440%;
 	display:flex;
@@ -107,8 +113,10 @@ from {transform:translate(-5%,0);}
 	text-align: center;
 	
 }
+
  h1 {
     text-align: center;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .recette h4{
 	text-align: center;
@@ -616,4 +624,5 @@ text-align: center;
 	font: 400 100% arial, sans-serif;
 	background: #AACFD7;
 	text-align: center;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

@@ -1,6 +1,6 @@
 <?php
-require_once"C:\wamp64\www\Projet\user\saison.php";
-require_once "C:\wamp64\www\Projet\user\home.php";
+require_once  "user\saison.php";
+require_once  "user\home.php";
 class saisonpage{
     public function Get_result($saison){
     $modl=new modele;
@@ -16,9 +16,9 @@ $i++;
 return $m;
    
 }
-    public function Afficher_site(){
+    public function Afficher_site($name){
         $site=new saison();
-        $site->site_vue();
+        $site->site_vue($name);
 }
 }
 ?>

@@ -13,28 +13,28 @@ class Addform{
         <form methode="GET" action="indexadmin.php">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Nom News </label>
-    <input type="text" class="form-control" name="nom_news" id="exampleInputEmail1"  aria-describedby="emailHelp" placeholder="<?php echo $_GET['nom']?>">
+    <input type="text" class="form-control" name="nom_news" id="exampleInputEmail1"  aria-describedby="emailHelp" placeholder="">
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Description News</label>
-    <input type="text" class="form-control" name="desc" id="exampleInputPassword1" placeholder="<?php echo $_GET['']?>">
+    <input type="text" class="form-control" name="desc" id="exampleInputPassword1" placeholder="">
     <div id="emailHelp" class="form-text">Les Ingrediants sont séparer par ","</div>
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Ajouter une Image</label>
-    <input type="file" class="form-control" id="exampleInputPassword1" placeholder="<?php echo $_GET['']?>">
+    <input type="file" class="form-control" id="exampleInputPassword1" placeholder="">
   </div>
     <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Ajouter un Video</label>
-    <input type="file" class="form-control" id="exampleInputPassword1" placeholder="<?php echo $_GET['']?>">
+    <input type="file" class="form-control" id="exampleInputPassword1" placeholder="">
     </div>
-<?php if($_GET['idnm']!=""){ ?></div>
+<?php if(isset($_GET['idnm'])!=""){ ?></div>
   <button type="submit" name="mod_news" class="btn btn-primary">Modifier</button>
 </form>
 </div>
 <?php
 } 
-elseif($_GET['idrm']!=""){
+elseif(isset($_GET['idrm'])!=""){
   ?></div>
   <button type="submit" name="mod_recette" class="btn btn-primary">Modifier</button>
 </form>

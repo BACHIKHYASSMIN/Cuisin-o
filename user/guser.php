@@ -1,5 +1,5 @@
 <?php
-require_once "C:\wamp64\www\Projet\controller\guser.php";
+require_once  "controller\guser.php";
  class uservue{
     
     private function Formulaire_Ajouter(){

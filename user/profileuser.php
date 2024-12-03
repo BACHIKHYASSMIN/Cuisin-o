@@ -1,84 +1,110 @@
 <?php
 class Profil_user{
-    public Function Afficher_contet(){
-        ?>
-        <html>
-<head>
-  <title>Profil</title>
-  <link rel="stylesheet" href="style4.css">
+  private function head(){
+    ?>
+     <head>
+        <title>Recette Page</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css"/>
+        
 </head>
-<body class="body5">
-<?php
-        $site=new AdminHome;
-        $site->menu();
-        ?>
-<!-- Navbar -->
-<div class="nav">
     <?php
-    $get=new ProfilUserc;
-    $p=$get->ControleUser();
-    foreach($p as $i){
+}
+private function body(){
 
     
-    ?>
-  <div class="container">
-    <h1>Bienvenu <?php  echo $i['nom_admin'] ?> Sur Votre Profil</h1>
-  </div>
-</div>
+     
+  
+        
 
-<!-- Content -->
-<div class="content">
+?> 
+    
+<body class="body2">
+        
+<div class="csslider">
+   
+        <div class="contenu" style="height:1200px;">
 
-  <!-- Profile Section -->
-  <div class="profile-section">
-    <div class="container">
-    <?php echo '<img class="profile-photo"src="data:image;base64,'.base64_encode($i['image'] ).'" >';?>
-      <p class="profile-name"><?php echo $i['nom_admin']?></p>
-      <p class="profile-detail"></p>
-      <button class="button profile-follow">Contact</button>
-    </div>
-  </div>
+            <div class="centre categorie">
+                <p class="categorie">Profil</p>
+                
+            </div>
+            <?php
+            $site=new ProfilUserc;
+            
+            $row=$site->get_userData();
+            foreach($row  as $r){
+              $k=$r['id_user'];
+            ?>
+            <div class="separateur"></div>
 
-  <!-- Detail Section -->
-  <div class="detail-section">
-    <div class="container">
+            <div class="centre">
+                <p class="description">Bienvenu <?php echo $r['Nom_user']; echo $r['Prenom_user']?>Dans votre Profil</p>
+            </div>
+          
+            <div class="info">
+            <?php  echo '<img src="data:image;base64,'.base64_encode($r['Image_user'] ).'" style="width:600px" >';      ?>
+            <table class="info">
+                        <tr>
+                            <th>Nom</th>
+                            <th>Prenom</th>
+                            <th>Email</th>
+                            
+                        </tr>
+                        <tr>
+                            
+                       
+                            <td><?php echo $r['Nom_user'] ?></td>
+                            <td><?php echo $r['Prenom_user'] ?></td>
+                            <td><?php echo $r['Email'] ?></td>
+                            
+            
+            <?php
+        }
+        
+        ?>
+                              
+                        </tr>
+                    </table>
+            </div>
+            
+        <div>
+        <table class="table">
+  <thead class="table-dark">
+ <th>Nom Recette</th>
+ <th>Notation</th>
+  </thead>
+  <tbody>
+<tr>
+    <td></td>
+</tr>
+  </tbody>
+</table>
+            
+    
+   
 
-      <div class="card">
-        <div class="container">
-          <div class="card-title"></div>
-          <div class="card-body">
-           Votre Nom: <?php echo $i['nom_admin']?> 
-          </div>
-        </div>
-      </div>
+    </body>
+    <?php
 
-      <div class="card">
-        <div class="container">
-          <div class="card-title"></div>
-          <div class="card-body">
-          Votre Email:<?php echo $i['Email']?>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="container">
-          <div class="card-title"></div>
-          <div class="card-body">
-           Votre Mot de Passe:<?php echo $i['mdp_admin']?>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-
-</body>
-</html>
-        <?php
-    }
 }
+private function end(){
+    ?>
+     </html>
+    <?php
+}
+private function begin(){
+    ?>
+    <!DOCTYPE html>
+    <html>
+    <?php
+}
+public function site_vue(){
+   $this->begin();
+   $this->head();
+   $this->body();
+   $this->end();
+  }
+
 }
 ?>

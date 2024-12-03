@@ -1,7 +1,7 @@
 
 <?php
-require_once "C:\wamp64\www\Projet\controller\AcceuilController.php";
-require_once "C:\wamp64\www\Projet\user\home.php";
+require_once  "controller\AcceuilController.php";
+require_once  "user\home.php";
        class UserView {
 
 
@@ -13,7 +13,7 @@ require_once "C:\wamp64\www\Projet\user\home.php";
             <script  src=""></script>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"> </script>
             
-            <link rel="stylesheet" href="style2.css">
+            <link rel="stylesheet" href="styleacceuil.css">
             <title> CouZinty </title>
             </head>
             <?php
@@ -43,72 +43,40 @@ require_once "C:\wamp64\www\Projet\user\home.php";
   
       public function Rcts($nom){
         ?>
-           
-        <div class="selectors">
-        <div >
-      <input type="hidden" id="filters" value="<?php $nom ?>">
-<select name="fetchval" id="fetchval">
-  <option value="" disabled="" selected="" >Séléctionner un Filtres</option>
-  <option value="nom_recette" >Nom</option>
-  <option  value="Temps de Préparation" >Temps de Préparation </option>
-  <option value="Temps de Cuisson" >Temps de Cuisson </option>
-  <option value="Temps Total" >Temps Total </option>
-  <option value="Calories" >Calories </option>
-  <option value="Difféculté" >Difféculté </option>
-  <option value="Last Ajoutées" >Last Ajoutées </option>
-</select>
-        </div>
-        </div>
-        
-  <div class="cat">
-        <div class="cove">
-        <?php
-
-        $site=new AcceuilController;
-       $r=$site->set_cadre($nom);
-          $this->Filtres($r);
-        
-          ?>
-          
-          </div>
-  </div>
-  <?php
-        
-      ?>
-        
        
-              <?php
-                
-      }
-      public function Filtres($r){
-        ?>
-        <div class="cat">
-        <div class="cove">
-        <?php
-        $k=new vue;
-          $k->CadreSimple($r,'titre_cadre','image_recette','descroption_cadre','id_cadre');
-          ?>
-          
-          </div>
-  </div>
-        <?php
-       }
 
+      <form class="filter" method="GET" >
+        <p>Rechercher Votre recette <?php echo $_SESSION['object'] ?> Par :</p><br>
+        <input  type="text" name="Nom_recette" placeholder="Nom Recette"/>
+        <input type="text" name="prepare_time"  placeholder="Temps de preparation"/>
+        <input type="text" name="cuisss_time" placeholder="Temps de cuisson "/>
+        <input type="text" name="calories"  placeholder="Nombre de Calories"/>
+        <select name="diff">
+          <option value="">Selectionner la difficulté</option>
+          <option value="facile">Facile</option>
+          <option value="difficile">Difficile</option>
+          <option value="moyenne">Moyenne</option>
+        </select>
+        <input type="submit" name="val" value="Chercher" />
+      </form>
+  <?php 
+       $this->categorie($nom);
+      }
+      
+      
        
        public function categorie($Name){
         ?>
          <div class="catégorie">
           <a href="index.php?object=<?php echo $Name?>"> <h1><?php echo $Name ?></h1> </a>
           <div class="slide">
-            <div class="limit">
             <div class="cover">
+            <div class="limit">
             <?php
                 $cadre=new AcceuilController;
                 $r=$cadre->set_cadre($Name);
                 $k=new vue;
-               
-                            
-            
+          
             
             for ($x = 0; $x <10; $x++) {
               $k->CadreSimple($r,'titre_cadre','image_recette','descroption_cadre','id_recette');
@@ -122,13 +90,9 @@ require_once "C:\wamp64\www\Projet\user\home.php";
         </div>
         <?php
        }
-       public function SendROw($nom,$row){
-        $ss=new AcceuilController;
-        $tt=$ss->Get_Filter($nom,$row);
-        $this->Filtres($tt);
-
-       }
+      
 public function site_vue($name){
+
   $title=$name;
   ?>
   <!DOCTYPE html>
@@ -143,9 +107,6 @@ public function site_vue($name){
   $site->menu();
   if($name!=''){ 
     
-    ?>
-    <h1><?php   ?></h1> 
-    <?php
      $this->Rcts($name);
      
   }

@@ -49,7 +49,7 @@ class pagenews{
                 <div class="centre categorie">
                     <p class="categorie">Video</p>
                 </div>
-                <<h1><?php echo $td['titre_news']?></h1>
+                <h1><?php echo $td['titre_news']?></h1>
 <div class="separateur"></div>
 <div class="centre">
                     <p class="description"></p>

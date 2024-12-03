@@ -1,12 +1,12 @@
 <?php
-require_once "C:\wamp64\www\Projet\user\home.php";
+require_once  "user\home.php";
 
 class fete_vue{
     private  function Header()
     {
         ?>
         <
-        <link rel="stylesheet" href="style2.css">
+        <link rel="stylesheet" href="saisonstyle.css">
         <title> News page </title>
         </head>
         <?php
@@ -20,10 +20,10 @@ class fete_vue{
                 public function categorie($Name){
                   
                     ?>
-                     <div class="catégo">
+                     <div class="cat">
+                   
+                      <div  class="slide">
                       <a href="index.php?ob=<?php echo $Name ?>"> <h1 ><?php echo $Name ?></h1> </a>
-                      <div >
-                      <div class="limit">
                         <div class="cover">
                         <?php
                                 $site=new fete_con;
@@ -37,7 +37,7 @@ class fete_vue{
                 
                       
                         ?>
-                      </div>
+                      
                       </div>
                       </div>
                     </div>

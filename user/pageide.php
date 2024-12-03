@@ -1,5 +1,5 @@
 <?php
-require_once "C:\wamp64\www\Projet\user\home.php";
+require_once  "user\home.php";
 
 class ide_vue{
     public function Formulaire(){
@@ -39,18 +39,17 @@ searchButton.addEventListener('click', () => {
                 public function categorie($id,$Name){
                     $r=$id;
                     ?>
-                      
+       <p >Rechercher des Recette conteneant:</p>              
         <form  class="search-group" method="GET" action="index.php">
-  <label class="form-label" for="form1">Rechercher des Recette conteneant:</label><br>
     <input name="search_input" type="text" class="form-control" />
     <input  type="submit" value="Rechercher" name="search_submit"/>
     </form>
-</div>
+        
 
                        <div class="ca">
                         <h1><?php echo $Name ?></h1> 
                         <div class="slide">
-                          <div class="cover">
+                          <div class="cove">
                           <?php
                               $k=new vue;
                               for($i=0;$i<count($r);$i++){
@@ -87,7 +86,7 @@ else
 {
     $this->categorie($ide,"Resultat :");
 }
-
+$site->Footer();
 $site->end();
 }
 }

@@ -13,48 +13,43 @@ class LogForm{
         <form methode="GET" action="indexadmin.php">
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Nom Recette</label>
-    <input type="text" class="form-control" name="nom" id="exampleInputEmail1"  aria-describedby="emailHelp" placeholder="<?php echo $_GET['nom']?>">
+    <input type="text" class="form-control" name="nom" id="exampleInputEmail1"  aria-describedby="emailHelp" placeholder="">
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Type de Recette</label>
-    <input type="text" class="form-control" name="type" id="exampleInputPassword1"  placeholder="<?php echo $_GET['type']?>">
+    <input type="text" class="form-control" name="type" id="exampleInputPassword1"  placeholder="">
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Temps de Préparatoion</label>
-    <input type="text" class="form-control" name="tpp" id="exampleInputPassword1"  placeholder="<?php echo $_GET['tpp']?>">
+    <input type="text" class="form-control" name="tpp" id="exampleInputPassword1"  placeholder="">
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Temps de Cuisson</label>
-    <input type="text" class="form-control" name="tc" id="exampleInputPassword1" placeholder="<?php echo $_GET['tc']?>">
+    <input type="text" class="form-control" name="tc" id="exampleInputPassword1" placeholder="">
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Temps de Repos</label>
-    <input type="text" class="form-control"  name="tr" id="exampleInputPassword1" placeholder="<?php echo $_GET['tr']?>"> 
+    <input type="text" class="form-control"  name="tr" id="exampleInputPassword1" placeholder=""> 
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Calories</label>
-    <input type="number" class="form-control" name="cal" id="exampleInputPassword1" placeholder="<?php echo $_GET['cal']?>">
+    <input type="number" class="form-control" name="cal" id="exampleInputPassword1" placeholder="">
   </div>
+ 
   <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Les Ingrediants:Quantity</label>
-    <input type="text" class="form-control" name="" id="exampleInputPassword1" placeholder="<?php echo $_GET['']?>">
-    <div id="emailHelp" class="form-text">Les Ingrediants sont séparer par ","</div>
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Les Etapes</label>
-    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="<?php echo $_GET['']?>">
-    <div id="emailHelp" class="form-text">Les Etapes sont séparer par un saut de ligne</div>
+    <label for="exampleInputPassword1" class="form-label">La difficulté</label>
+    <input type="text" name="diff"class="form-control" id="exampleInputPassword1" placeholder="">
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Ajouter une Image</label>
-    <input type="file" class="form-control" id="exampleInputPassword1" placeholder="<?php echo $_GET['']?>">
-<?php if($_GET['idmod']!=""){ ?></div>
-  <button type="submit" name="modifier" class="btn btn-primary">Modifier</button>
+    <input type="file" class="form-control" id="exampleInputPassword1" placeholder="">
+<?php if(isset($_GET['idmod'])){ ?></div>
+  <button type="submit" name="modifier" class="btn btn-primary">Modifiers</button>
 </form>
 </div>
 <?php
 } 
-elseif($_GET['idrm']!=""){
+elseif(isset($_GET['idrm'])!=""){
   ?>  </div>
     <button type="submit" name="mod_recette" class="btn btn-primary">Modifier</button>
   </form>

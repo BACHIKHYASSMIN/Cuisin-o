@@ -53,7 +53,7 @@ class vuenews{
                         <th>Nom news</th>
                         <th>Image news</th>
                         <th>Description news</th>
-                        <th>Video</th>
+                       
                      
                         <th>Modification</th>
                         <th>Suppression</th>
@@ -72,7 +72,7 @@ class vuenews{
                 <td><?php echo $p['nom_news'] ?></td>
                  <?php echo '<td><img src="data:image;base64,'.base64_encode($p['image_news'] ).'" ></td>';?>
                  <td><?php echo $p['description_news'] ?></td>
-                 <?php echo '<td><video src="data:image;base64,'.base64_encode($p['video_news'] ).'"></video></td>';?>
+                
                 <td><a href="indexadmin?idnm=<?php echo $p['id_news'] ?>">Modifier</a></td>
                 <td><a href="indexadmin?idns=<?php echo $p['id_cadre_news'] ?>">Supprimer</a></td>
                
@@ -95,7 +95,7 @@ class vuenews{
                         <th>Nom news</th>
                         <th>Image news</th>
                         <th>Description news</th>
-                        <th>Video</th>
+                        
                         <th>Modification</th>
                         <th>Suppression</th>
                     </thead>
@@ -113,8 +113,8 @@ class vuenews{
                 <td><?php echo $p['id_recette'] ?></td>
                 <td><?php echo $p['nom_news'] ?></td>
                  <?php echo '<td style="text-align: center;"><img  style="width:50%;"src="data:image;base64,'.base64_encode($p['image_news'] ).'" ></td>';?>
-                <td><?php echo $p['descr'] ?></td>
-                <?php echo '<td><video src="data:image;base64,'.base64_encode($p['video_news'] ).'"></video></td>';?>
+                <td><?php echo $p['description_news'] ?></td>
+               
                 
                 <td><a href="indexadmin?idrm=<?php echo $p['id_recette'] ?>">Modifier</a></td>
                 <td><a href="indexadmin?idns=<?php echo $p['id_cadre_news'] ?>">Supprimer</a></td>

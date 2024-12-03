@@ -1,6 +1,6 @@
 <?php
-require_once 'C:\wamp64\www\Projet\modele\modeAcceuil';
-require_once "C:\wamp64\www\Projet\user\homeadminpage.php";
+require_once 'C:\xampp\htdocs\BACHIKH_YASSMIN_SIL1\TDW\Projet\modele\modeAcceuil';
+require_once  "user\homeadminpage.php";
 class homeadmin{
 
    

@@ -4,18 +4,23 @@ class healthy_view{
     private  function Header()
         {
               ?>
-              <
+              
               <link rel="stylesheet" href="HethyStyle.css">
               <title> Healthy page </title>
               </head>
               <?php
                 }
 
+
     private function body(){
 ?>
 <body>
 <?php
     }
+
+
+    
+      
     public function categorie($Name){
       ?>
          <div class="catégorie">
@@ -28,13 +33,6 @@ class healthy_view{
                 for($i=0;$i<count($r);$i++){
                 $k=new vue;
                 $k->CadreSimple($r[$i],'titre_cadre','image_cadre','descroption_cadre','id_recette');
-                            
-            
-            /*
-            for ($x = 0; $x <10; $x++) {
-            
-            }
-            */
         }
             ?>
           </div>
@@ -50,7 +48,8 @@ public function site_vue(){
 $this->body();
 $site->Nav_header();
 $site->menu();
-$this->categorie('Healthy');
+$this->categorie("Healthy");
+$site->Footer();
 $site->end();
 
 }

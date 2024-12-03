@@ -1,6 +1,6 @@
 <?php
-require "C:\wamp64\www\Projet\user\login.php";
-require_once 'C:\wamp64\www\Projet\modele\modeAcceuil';
+require  "user\login.php";
+require_once 'C:\xampp\htdocs\BACHIKH_YASSMIN_SIL1\TDW\Projet\modele\modeAcceuil';
 class loginpage{
     public function Controle_user($email,$mdp){
 $mode=new modele();

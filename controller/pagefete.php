@@ -1,6 +1,6 @@
 <?php
-require_once "C:\wamp64\www\Projet\user\pagefete.php";
-require_once 'C:\wamp64\www\Projet\modele\modeAcceuil';
+require_once  "user\pagefete.php";
+require_once 'C:\xampp\htdocs\BACHIKH_YASSMIN_SIL1\TDW\Projet\modele\modeAcceuil';
 class fete_con{
 
     public function Get_Fete($non){

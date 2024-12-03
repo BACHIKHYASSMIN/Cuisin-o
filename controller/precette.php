@@ -1,6 +1,6 @@
 <?php
-require "C:\wamp64\www\Projet\user\Acceuil.php";
-require_once 'C:\wamp64\www\Projet\modele\modeAcceuil';
+require  "user\Acceuil.php";
+require_once 'C:\xampp\htdocs\BACHIKH_YASSMIN_SIL1\TDW\Projet\modele\modeAcceuil';
 
 class ReceteeGestion{
     protected $try;

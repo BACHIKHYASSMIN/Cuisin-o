@@ -1,6 +1,6 @@
 <?php
-require_once "C:\wamp64\www\Projet\controller\homeadmin.php";
-require_once "C:\wamp64\www\Projet\user\AdminHome.php";
+require_once  "controller\homeadmin.php";
+require_once  "user\AdminHome.php";
 class GestionRecette {
 
 
@@ -96,9 +96,8 @@ class GestionRecette {
         <td><?php echo $i['prepare_time'] ?></td>
         <td><?php echo $i['cuisss_time'] ?></td>
         <td><?php echo $i['calories'] ?></td>
-        <td><?php echo $i['notation'] ?></td>
-        
-        <td><a href="indexadmin.php?idmod=<?php echo $i['id_recette'] ?>&nom=<?php echo $i['nom_recette'] ?>&tpp=<?php echo $i['prepare_time'] ?>&tc=<?php echo $i['cuisss_time'] ?>&tr=<?php echo $i[''] ?>&cal=<?php echo $i['calories'] ?>">Modifier</a></td>
+        <td><?php echo $i['notation'] ?></td> 
+        <td><a href="indexadmin.php?idmod=<?php echo $i['id_recette']  ?>">Modifier</a></td>
         <td><a href="indexadmin.php?id=<?php echo $i['id_recette'] ?>">Supprimer</a></td>
         
         

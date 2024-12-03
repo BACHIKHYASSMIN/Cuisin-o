@@ -1,11 +1,11 @@
 <?php
-require_once "C:\wamp64\www\Projet\user\home.php";
+require_once  "user\home.php";
 
 class news{
   private  function Header()
         {
               ?>
-              <
+              
               <link rel="stylesheet" href="stylenews.css">
               <title> News page </title>
               </head>

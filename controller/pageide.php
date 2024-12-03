@@ -1,6 +1,6 @@
 <?php
-require_once "C:\wamp64\www\Projet\user\pageide.php";
-require_once 'C:\wamp64\www\Projet\modele\modeAcceuil';
+require_once  "user\pageide.php";
+require_once 'C:\xampp\htdocs\BACHIKH_YASSMIN_SIL1\TDW\Projet\modele\modeAcceuil';
 class ide_con{
 public function search($tr){
     $cpt=1;
@@ -10,7 +10,7 @@ public function search($tr){
         }
     }
     $cherche=(int)(($cpt*70)/100);
-    var_dump($cherche);
+    
     $t=0;
     $cpt=0;
     $mot="";
@@ -26,7 +26,7 @@ else{
 }
 $t++;
         }
-        var_dump($mot);
+    
      
 $modl=new modele;
 $p=$modl->search_recette($mot);

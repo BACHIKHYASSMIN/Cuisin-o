@@ -1,5 +1,5 @@
 <?php
-require_once "C:\wamp64\www\Projet\user\profil.php";
+require_once  "user\profil.php";
 class ProfilCo{
     public function COntrole(){
         $model=new modele;

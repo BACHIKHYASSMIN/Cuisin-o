@@ -8,7 +8,7 @@ class user_connection{
         <script  src=""></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"> </script>
         
-        <link rel="stylesheet" href="style2.css">
+        <link rel="stylesheet" href="styleacceuil.css">
         <title> CouZinty </title>
         </head>
         <?php
@@ -95,8 +95,8 @@ class user_connection{
      <div class="catégorie">
       <a href="index.php?object=<?php echo $Name?>"> <h1><?php echo $Name ?></h1> </a>
       <div class="slide">
-        <div class="limit">
         <div class="cover">
+        <div class="limit">
         <?php
             $cadre=new AcceuilController;
             $r=$cadre->set_cadre($Name);
@@ -117,12 +117,7 @@ class user_connection{
     </div>
     <?php
    }
-   public function SendROw($nom,$row){
-    $ss=new AcceuilController;
-    $tt=$ss->Get_Filter($nom,$row);
-    $this->Filtres($tt);
-
-   }
+   
 public function site_vue($name){
 $title=$name;
 ?>

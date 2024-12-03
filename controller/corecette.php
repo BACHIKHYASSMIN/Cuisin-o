@@ -1,6 +1,6 @@
 <?php
-require "C:\wamp64\www\Projet\user\pagerecette.php";
-require_once 'C:\wamp64\www\Projet\modele\modeAcceuil';
+require  "user\pagerecette.php";
+require_once 'C:\xampp\htdocs\BACHIKH_YASSMIN_SIL1\TDW\Projet\modele\modeAcceuil';
 
 
 class corecette{
@@ -14,13 +14,12 @@ $i=0;
 $j=0;
 foreach($IngRecette as $ing){
     $IngIds[$i]=$ing['id_ingrediant'];
+    
+    
     $Quantity[$i]=$ing['quantity'];
     $i++;
 }
 
-for ($i=0;$i<count($IngIds);$i++){
-    echo $IngIds[$i];
-}
 foreach($EtpRecette as $etape){
     $EtapIds[$j]=$etape['id_etape'];
     $Desc[$j]=$etape['descr'];
@@ -40,11 +39,15 @@ $i++;
 
 
         $site=new pagerecetteview;
+       
+    
+       
         $site->site_vue($Result1,$Ingrediants,$Quantity,$Desc);
+}
         
         
 }
 
 
-}
+
 ?>

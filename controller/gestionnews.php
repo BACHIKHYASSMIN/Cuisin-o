@@ -1,11 +1,11 @@
 <?php
-require_once "C:\wamp64\www\Projet\user\gestionnews.php";
+require_once  "user\gestionnews.php";
 class conews{
 public $idnews;
 public $idrecette;
     public function add_recette($nom,$o,$p,$f,$g,$k){
         $model=new modele;
-        $model->Ajouter_recette($nom);
+        $model->Ajouter_recette($nom,$o,$p,$f,$g,$k,$_GET['diff']);
         $id=$model->RecetteID($nom);
         foreach($id as $k){
             $o=$k['id_recette'];
@@ -14,9 +14,9 @@ public $idrecette;
         $this->Afficher_site();
             }
 
-            public function add_news($nom,$o,$p,$f,$g,$k){
+            public function add_news($nom,$o){
                 $model=new modele;
-                $model->Ajouter_news($nom);
+                $model->Ajouter_news($nom,$o);
                 $id=$model->NewsID($nom);
                 foreach($id as $k){
                     $o=$k['id_news'];
@@ -52,9 +52,9 @@ $this->idnews=$id;
                 $model->Modifier_Cadrenews($this->idnews,$name);
                 $this->Afficher_site();
             }
-            public function modifie_recette($name){
+            public function modifie_recette($name,$type,$tp,$tc,$tr,$cal,$dif){
                 $model=new modele;
-                $model->Modifier_recette($this->idrecette,$name);
+                $model->Modifier_recette($this->idrecette,$name,$type,$tp,$tc,$tr,$cal,$dif);
                 $model->Modifier_CadrenewsRecette($this->idrecette,$name);
                 $this->Afficher_site();
             }

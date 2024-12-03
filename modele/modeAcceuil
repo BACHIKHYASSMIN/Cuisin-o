@@ -1,9 +1,9 @@
 <?php 
-require_once "C:\wamp64\www\Projet\controller\homeadmin.php";
-require_once "C:\wamp64\www\Projet\controller\AcceuilController.php";
-require_once "C:\wamp64\www\Projet\controller\corecette.php";
-require_once "C:\wamp64\www\Projet\controller\gestionrecette.php";
-require_once "C:\wamp64\www\Projet\controller\purr.php";
+require_once  "controller\homeadmin.php";
+require_once  "controller\AcceuilController.php";
+require_once  "controller\corecette.php";
+require_once  "controller\gestionrecette.php";
+require_once  "controller\purr.php";
 
  class modele  {
   
@@ -37,7 +37,7 @@ private $message = "";
  }
  public function Get_admin(){
   $connect=$this->connection($this->host,$this->username,$this->password,$this->database);
-  $query = "SELECT  from admin "; 
+  $query = "SELECT * from admin "; 
   $r=$this->GetRequete($connect,$query);
   $this->deconexion($connect);
   return $r;
@@ -45,7 +45,7 @@ private $message = "";
 
  public function user($email,$mdp){
   $connect=$this->connection($this->host,$this->username,$this->password,$this->database);
-  $query = "SELECT * from utilisateur where Email=$email AND Mdp=$mdp ";
+  $query = "SELECT * from utilisateur where Email='$email' AND Mdp='$mdp' ";
   $r=$this->GetRequete($connect,$query);
   $this->deconexion($connect);
   return $r;
@@ -118,17 +118,24 @@ private $message = "";
     return $r;
    }
 
- public function Ajouter_recette($nom){
+ public function Ajouter_recette($nom,$type,$tpp,$tc,$r,$cal,$dif){
   $connect=$this->connection($this->host,$this->username,$this->password,$this->database);
-  $query = "INSERT INTO recette (nom_recette,prepare_time,cuisss_time,total,calories,) VALUES ('$nom')";
+  $query = "INSERT INTO recette (nom_recette,type_recette,prepare_time,cuisss_time,tr,calories,diff) VALUES ('$nom','$type','$tpp','$tc','$r','$cal','$dif')";
+  $r=$this->GetRequete($connect,$query);
+  $this->deconexion($connect);
+  return $r;
+ }
+ public function Ajouter_recettewait($nom){
+  $connect=$this->connection($this->host,$this->username,$this->password,$this->database);
+  $query = "INSERT INTO recettewait (nom_recette,prepare_time,cuisss_time,total,calories,) VALUES ('$nom')";
   $r=$this->GetRequete($connect,$query);
   $this->deconexion($connect);
   return $r;
  }
 
- public function Ajouter_news($nom){
+ public function Ajouter_news($nom,$o){
   $connect=$this->connection($this->host,$this->username,$this->password,$this->database);
-  $query = "INSERT INTO news (titre_news) VALUES ('$nom')";
+  $query = "INSERT INTO news (titre_news,description) VALUES ('$nom','$o')";
   $r=$this->GetRequete($connect,$query);
   $this->deconexion($connect);
   return $r;
@@ -155,6 +162,13 @@ private $message = "";
     return $r;
    }
   
+   public function Remove_cadrerecette($ID){
+    $connect=$this->connection($this->host,$this->username,$this->password,$this->database);
+    $query = "DELETE  FROM  cadre_recette where id_recette=$ID";
+    $r=$this->GetRequete($connect,$query);
+    $this->deconexion($connect);
+    return $r;
+   }
    public function Remove_news($ID){
     $connect=$this->connection($this->host,$this->username,$this->password,$this->database);
     $query = "DELETE  FROM  cadre_news where id_cadre_news=$ID";
@@ -192,9 +206,9 @@ private $message = "";
     $this->deconexion($connect);
     return $r;
    }
-   public function Modifier_recette($ID,$name){
+   public function Modifier_recette($ID,$name,$type,$tp,$tc,$tr,$cal,$dif){
     $connect=$this->connection($this->host,$this->username,$this->password,$this->database);
-    $query = "UPDATE recette SET nom_recette='$name'  WHERE  id_recette=$ID ";
+    $query = "UPDATE recette SET nom_recette='$name',type_recette='$type',prepare_time='$tp',cuisss_time='$tc',tr='$tr',calories='$cal',diff='$dif'  WHERE  id_recette=$ID ";
     $r=$this->GetRequete($connect,$query);
     $this->deconexion($connect);
     return $r;
@@ -246,7 +260,7 @@ public function News($ID){
 
  public function Recette($ID){
   $connect=$this->connection($this->host,$this->username,$this->password,$this->database);
-  $query="SELECT DISTINCT * from cadre_recette where id_recette=$ID";
+  $query="SELECT DISTINCT * from cadre_recette where id_recette=$ID LIMIT 10";
   $rows=$this->GetRequete($connect,$query);
   $this->deconexion($connect);
   return $rows;
@@ -296,6 +310,7 @@ public function News($ID){
     $this->deconexion($connect);
     return $rows;
    }
+   
    public function Get_latest_recette($month){
     $connect=$this->connection($this->host,$this->username,$this->password,$this->database);
     $query="SELECT * FROM recette WHERE MONTH(date_added) = '$month'";
@@ -313,9 +328,16 @@ public function News($ID){
     return $rows;
    }
 
-public function FilterRecette($name,$c){
+public function FilterRecette($name,$nom,$tps,$tcs,$cal,$dif){
   $connect=$this->connection($this->host,$this->username,$this->password,$this->database);
-  $query="SELECT * FROM recette where type_recette='$name' ORDER BY '$c' ASC ";
+  $query="SELECT * FROM recette where (type_recette='$name')and((nom_recette='$nom')or(prepare_time='$tps')or(cuisss_time='$tcs')or(calories='$cal')or(diff='$dif')) ";
+  $p=$rows=$this->GetRequete($connect,$query);
+  $this->deconexion($connect);
+  return $rows;
+}
+public function FilterRecetteH($name,$nom,$tps,$tcs,$cal,$dif){
+  $connect=$this->connection($this->host,$this->username,$this->password,$this->database);
+  $query="SELECT * FROM recette INNER JOIN ingrediants on recette.id_recette = ingrediants.id_recette where (ingrediants.saison='$name')and((nom_recette='$nom')or(prepare_time='$tps')or(cuisss_time='$tcs')or(diff='$dif')) ";
   $p=$rows=$this->GetRequete($connect,$query);
   $this->deconexion($connect);
   return $rows;

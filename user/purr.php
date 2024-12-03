@@ -1,12 +1,13 @@
 <?php
-require_once "C:\wamp64\www\Projet\user\home.php";
+require_once  "user\home.php";
 
 class nurr_vue{
     public function Ingrediants($Name){
         ?>
 <div class="cat">
+  <div class="slide">
     <h1>Nuttrition</h1>
-          <div class="cove">
+          <div class="cover">
             
           <?php
            $cadre=new nurr_con;
@@ -15,14 +16,15 @@ class nurr_vue{
             $k->CadreIng($r);
             ?>
           </div>
+  </div>
 </div>
           <?php
     }
     private  function Header()
     {
         ?>
-        <
-        <link rel="stylesheet" href="style2.css">
+        
+        <link rel="stylesheet" href="saisonstyle.css">
         <title> News page </title>
         </head>
         <?php

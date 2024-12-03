@@ -1,5 +1,5 @@
 <?php
-require "C:\wamp64\www\Projet\user\signup.php";
+require  "user\signup.php";
 class signuppage{
 
 

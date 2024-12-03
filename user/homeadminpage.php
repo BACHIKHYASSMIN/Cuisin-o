@@ -1,6 +1,6 @@
 <?php
-require_once "C:\wamp64\www\Projet\controller\gestionrecette.php";
-require_once "C:\wamp64\www\Projet\controller\homeadmin.php";
+require_once  "controller\gestionrecette.php";
+require_once  "controller\homeadmin.php";
 class homepage {
 
  

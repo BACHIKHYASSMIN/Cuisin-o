@@ -2,8 +2,8 @@
 
 use Addform as GlobalAddform;
 
-require_once "C:\wamp64\www\Projet\user\Ajouternews.php";
-require_once "C:\wamp64\www\Projet\controller\gestionrecette.php";
+require_once  "user\Ajouternews.php";
+require_once  "controller\gestionrecette.php";
 class Add{
 
     public function Afficher(){

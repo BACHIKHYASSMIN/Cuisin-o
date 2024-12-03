@@ -1,6 +1,6 @@
 <?php
-    require_once "C:\wamp64\www\Projet\controller\controllernewspage.php";
-require_once "C:\wamp64\www\Projet\controller\corecette.php";
+    require_once  "controller\controllernewspage.php";
+require_once  "controller\corecette.php";
   class pagerecetteview {
     
 private function head(){
@@ -54,7 +54,7 @@ private function head(){
                 <div class="separateur"></div>
 
                 <div class="centre">
-                    <p class="description">"Cette recette facile au chocolat est un grand classique. Elle fera plaisir aux plus gourmands."</p>
+                    <p class="description"><?php echo $r['desc_recette']?></p>
                 </div>
                 <div class="info">
                 
@@ -131,11 +131,11 @@ private function head(){
                 <h1><?php echo $r['nom_recette'] ?></h1>
 <div class="separateur"></div>
 <div class="centre">
-                    <p class="description">"Cette recette facile au chocolat est un grand classique. Elle fera plaisir aux plus gourmands."</p>
+                    <p class="description"><?php echo $r['desc_recette']?></p>
                 </div>
                 <div class="info">
-                <?php  echo '<video src="data:image;base64,'.base64_encode($r['video'] ).'" style="width:600px; height:600px" preload="audio"  controls autoplay ></video>' ;      ?>
-                
+                <video width="420" height="315" src="<?php  ;echo $r['video']?>" style="width:600px; height:600px" preload="audio"  controls autoplay ></video>
+            
                 </div>
                 </div>
    </li>

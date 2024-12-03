@@ -1,6 +1,6 @@
 <?php
-require "C:\wamp64\www\Projet\user\logadm.php";
-require_once 'C:\wamp64\www\Projet\modele\modeAcceuil';
+require  "user\logadm.php";
+require_once 'C:\xampp\htdocs\BACHIKH_YASSMIN_SIL1\TDW\Projet\modele\modeAcceuil';
 class loginadmpage{
     public function Controle_admin($nom,$mdp){
 $mode=new modele();

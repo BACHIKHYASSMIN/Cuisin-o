@@ -1,5 +1,5 @@
 <?php
- require_once "C:\wamp64\www\Projet\user\FormIng.php";
+ require_once  "user\FormIng.php";
 class ConIng{
    
 

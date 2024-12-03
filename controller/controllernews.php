@@ -1,7 +1,7 @@
 <?php
-require "C:\wamp64\www\Projet\user\actuvue.php";
+require  "user\actuvue.php";
 
-require_once 'C:\wamp64\www\Projet\modele\modeAcceuil';
+require_once 'C:\xampp\htdocs\BACHIKH_YASSMIN_SIL1\TDW\Projet\modele\modeAcceuil';
 class controllernews{
    
     public function sset_cadre(){

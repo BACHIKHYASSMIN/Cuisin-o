@@ -1,5 +1,5 @@
 <?php
-require_once "C:\wamp64\www\Projet\user\guser.php";
+require_once  "user\guser.php";
 class userco{
     public function add_recette($nom){
         $model=new modele;

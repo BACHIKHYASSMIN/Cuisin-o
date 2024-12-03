@@ -1,8 +1,7 @@
 body{
-	background-image: url("24.jpg");
+	background-image: url( "images/24.jpg");
 	background-repeat: no-repeat;
-
-	
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .nav_bar{
 	background-color: transparent;
@@ -563,9 +562,7 @@ a{
 .catégorie{
 	margin-top: -4%;
 }
-.catégorie h1{
-	margin-top: 33%;
-}
+
 .ca h1{
 	margin-top: 5%;
 }

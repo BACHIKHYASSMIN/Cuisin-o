@@ -1,5 +1,5 @@
 <?php
-require_once "C:\wamp64\www\Projet\user\home.php";
+require_once  "user\home.php";
 class login{
 
 

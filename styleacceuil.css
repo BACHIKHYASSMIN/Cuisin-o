@@ -1,0 +1,180 @@
+body{
+	background-image: url( "images/24.jpg");
+	background-repeat: no-repeat;
+
+	
+}
+p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+a{
+    text-decoration: none;
+    color:#6C829D;
+    font-size: larger;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.nav_bar{
+	background-color: transparent;
+	display: inline;
+	width: 100%;
+	padding: 1%;
+	margin-left: 7%;
+	margin-right: 3%;
+	
+
+}
+.nav-link {
+	text-align: center;
+	font-size: 130%;
+	color:black;
+	padding: 1%;
+	border-radius: 6%;
+	margin-left: 1%;
+	text-decoration: none;
+	
+  }
+  
+  .nav-link:hover {
+	background-color: #fff;
+	color:#AACFD7;
+  }
+  
+  .nav-header {
+	background-color: #AACFD7;
+  }
+  
+  .nav-header img {
+	width: 5%;
+  }
+  
+  .nav-logo img {
+	top:1;
+	position: absolute;
+	width:5%;
+  }
+<!------diaporama--->
+.csslider{
+	overflow:hidden;
+	margin-top:28%;	
+}
+
+.csslider{
+	overflow:hidden;
+	margin-top:28%;
+	
+	
+}
+
+.slider{
+	display:flex;
+	background-color:white;
+	animation-name:examples;
+	animation-duration:30s;
+	animation-timing-function:ease-in-out;
+	animation-iteration-count: infinite;
+}
+.slider ul{
+	width:700%;
+}
+
+@keyframes examples
+{
+from {transform:translate(-5%,0);}
+	25%{transform:translate(-36%,0);}
+	50% {transform:translate(-65%,0);}
+	75% {transform:translate(-95%,0);}
+	to {transform:translate(-5%,0);}
+	}*
+.slider:hover{
+	animation-play-state:paused;
+}
+.cove {
+	margin-top:3%;
+	display: flex;
+	flex-wrap: wrap;
+	text-align: center;
+}
+
+.cover {
+	width: 210%;
+	height: 80%;
+	overflow: scroll;
+}
+
+.limit{
+	border-radius: 10%;
+	display: flex;
+	width:160%;
+    height: 500px;
+
+}
+.slide{
+	overflow: hidden;
+	
+}
+
+.recette {
+	width: 300px;
+	background-color: #7e7e7e17;
+margin-left: 6px;
+margin-top: 5px;
+margin-bottom: 5%;
+height: 400px;
+	text-align: center;
+	
+}
+ h1 {
+    text-align: center;
+}
+.recette h4{
+	text-align: center;
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+.recette p{
+	text-align: center;
+}
+.recette a{
+	text-align: center;
+	text-decoration: none;
+	color:#7e7e7e;
+}
+.recette img{
+	border-radius: 5%;
+	margin-left: -6%;
+	width: 89%;
+}
+<!----------Footer --------->
+.footer {
+	
+	margin-top: -1%;
+	margin-left: 2%;
+
+}
+footer{
+	display: block;
+	background-color: #AACFD7;
+	padding-top: 3%;
+
+}
+.footer  a{
+	color:black;
+	margin-left: 3%;
+	
+
+}
+.contact{
+	margin-left: 90%;
+	margin-top: -1%;
+}
+ .contact img{
+	display: inline;
+	width:18%;
+	
+ }
+
+ 
+ .filter{
+	text-align: center;
+	margin-top:33%;
+ }

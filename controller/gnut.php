@@ -1,5 +1,5 @@
 <?php
-require_once "C:\wamp64\www\Projet\user\gnut.php";
+require_once  "user\gnut.php";
 class nutco{
 public $id;
     public function add_Ing($nom){

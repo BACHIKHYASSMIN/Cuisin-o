@@ -1,5 +1,5 @@
 <?php
-require "C:\wamp64\www\Projet\user\pagenews.php";
+require  "user\pagenews.php";
 class controllernewspage{
     public function Afficher_site($ID){
         $l=new modele;
@@ -15,7 +15,7 @@ class controllernewspage{
         }
         elseif($n==null){
             $ty=$l->Recete($r);
-            require_once "C:\wamp64\www\Projet\user\pagerecette.php";
+            require_once  "user\pagerecette.php";
             $site=new pagerecetteview;
             $site->site_vue($ty,"","","","");
         }

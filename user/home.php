@@ -1,7 +1,7 @@
 <?php
-require_once  'C:\wamp64\www\Projet\modele\modeAcceuil';
-require_once "C:\wamp64\www\Projet\user\gestionrecette.php";
-require_once "C:\wamp64\www\Projet\controller\saison.php";
+require_once  'C:\xampp\htdocs\BACHIKH_YASSMIN_SIL1\TDW\Projet\modele\modeAcceuil';
+require_once  'C:\xampp\htdocs\BACHIKH_YASSMIN_SIL1\TDW\Projet\user\gestionrecette.php';
+require_once  'C:\xampp\htdocs\BACHIKH_YASSMIN_SIL1\TDW\Projet\controller\saison.php';
 
 
 class vue{
@@ -25,7 +25,7 @@ class vue{
                 
                   <div class="nav-header">
                 <a href="index.html" class="nav-logo">
-                    <img src="logo.png" alt="simply recipes">
+                    <img src="images/logo.png" alt="simply recipes">
                 </a>
             
             
@@ -44,7 +44,7 @@ class vue{
                     <a class="nav-link" href="index.php?subject=saison">Saisons</a>
                     <a class="nav-link" href="index.php?subject=fete">Fêtes</a>
                     <a class="nav-link" href="index.php?subject=nurr">Nutrition</a>
-                    <a class="nav-link" href="">Contact</a>
+                    <a class="nav-link" href="index.php?subject=contact">Contact</a>
                  <a href="index.php?subject=profil" class="nav-link">Profil</a>
                  
                  </div>
@@ -62,7 +62,7 @@ class vue{
                       <a class="nav-link" href="index.php?subject=saison">Saisons</a>
                       <a class="nav-link" href="index.php?subject=fete">Fêtes</a>
                       <a class="nav-link" href="index.php?subject=nurr">Nutrition</a>
-                      <a class="nav-link" href="">Contact</a>
+                      <a class="nav-link" href="index.php?subject=contact">Contact</a>
                    <a href="index.php?subject=login" class="nav-link">Connexion</a>
                    
                    </div>
@@ -184,10 +184,10 @@ $r=$o;
                       <a  href="">Contact</a>
        </div>
        <div class="contact">
-                  <a  href="www.facebook.com"><img src="facebook.png"/></a> 
-                  <a ><img src="instagram.png"/></a>
-                  <a ><img src="youtube.png"/></a>
-                 <a ><img src="twitter.png"/></a>
+                  <a  href="www.facebook.com"><img src="images/facebook.png"/></a> 
+                  <a href="www.instagram.com"><img src="images/twitter.png"/></a>
+                  <a href="www.youtube.com"><img src="images/youtube.png"/></a>
+                 <a href="www.twitter.com"><img src="images/twitter.png"/></a>
              
        </div>
        </footer>
